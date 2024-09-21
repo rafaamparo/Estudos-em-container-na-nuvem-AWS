@@ -24,6 +24,8 @@ Este repositório também inclui um **arquivo tutorial** desenvolvido ao longo d
 - Passo a passo de utilização de **Amazon ECS** com **AWS Fargate**
 - Passo a passo de utilização da ferramenta VEMoC (Vertical Elasticity Management of Containers), que permite o gerenciamento de elasticidade vertical de memória em containers, conforme descrito por **Nicodemus et al.\[1\]**.
 
+Você pode acessar o tutorial completo [aqui](https://docs.google.com/document/d/1BYJx32pcGeCqaitQW26pobPJ-2dd-LrGgrfkrmMjOvA/edit?usp=sharing).
+
 ## Serviços Utilizados
 
 Este projeto faz uso dos seguintes serviços da **AWS** e ferramentas de conteinerização:

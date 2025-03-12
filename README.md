@@ -10,6 +10,8 @@ Esta pasta contém todos os artefatos utilizados nos experimentos descritos no r
 ### 2. **ERAD_2024**
 Nesta pasta, encontram-se os artefatos relacionados aos experimentos realizados para o resumo expandido apresentado no fórum de Iniciação Científica do **ERAD-RJ 2024** (Escola Regional de Alto Desempenho).
 
+O artigo recebeu o prêmio de **Melhor Artigo do Fórum de Iniciação Científica da IX Escola Regional de Alto Desempenho do Rio de Janeiro (ERAD-RJ 2024)**. O trabalho pode ser acessado no seguinte _link_: [https://sol.sbc.org.br/index.php/eradrj/article/view/31881](https://sol.sbc.org.br/index.php/eradrj/article/view/31881).
+
 ## Tutoriais
 
 Este repositório também inclui um **arquivo tutorial** desenvolvido ao longo da pesquisa, com o objetivo de ajudar iniciantes a compreender e utilizar serviços de nuvem e conteinerização da AWS. O tutorial aborda os seguintes tópicos:

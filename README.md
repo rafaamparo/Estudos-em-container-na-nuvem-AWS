@@ -1,6 +1,6 @@
 # Estudos em Container na Nuvem AWS
 
-Este repositório contém artefatos e tutoriais desenvolvidos ao longo de minha Iniciação Científica de 2023-2024, com foco no gerenciamento de recursos em nuvens e na utilização de serviços da AWS para experimentos e ensino.
+Este repositório, criado originalmente pela Sara Cavalcante, contém artefatos e tutoriais desenvolvidos ao longo de minha Iniciação Científica de 2024-2025, com foco no gerenciamento de recursos em nuvens e na utilização de serviços da AWS para experimentos e ensino.
 
 ## Estrutura do Repositório
 
@@ -11,6 +11,10 @@ Esta pasta contém todos os artefatos utilizados nos experimentos descritos no r
 Nesta pasta, encontram-se os artefatos relacionados aos experimentos realizados para o resumo expandido apresentado no fórum de Iniciação Científica do **ERAD-RJ 2024** (Escola Regional de Alto Desempenho).
 
 O artigo recebeu o prêmio de **Melhor Artigo do Fórum de Iniciação Científica da IX Escola Regional de Alto Desempenho do Rio de Janeiro (ERAD-RJ 2024)**. O trabalho pode ser acessado no seguinte _link_: [https://sol.sbc.org.br/index.php/eradrj/article/view/31881](https://sol.sbc.org.br/index.php/eradrj/article/view/31881).
+
+### 3. **PIBIC_2025**
+Esta pasta contém todos os artefatos utilizados nos experimentos descritos no relatório final da Iniciação Científica de 2024-2025 e para o resumo expandido submetido ao fórum de Iniciação Científica do **ERAD-SE 2025** (Escola Regional de Alto Desempenho), intitulado **"Gerenciamento de Recursos em Nuvem"** e coordenado pela professora Maria Cristina Silva Boeres (Instituto de Computação - UFF). 
+
 
 ## Tutoriais
 
@@ -34,15 +38,15 @@ Este projeto faz uso dos seguintes serviços da **AWS** e ferramentas de contein
 
 - **Amazon ECS**
 - **Amazon ECR**
+- **Amazon EKS**
+- **Kubernetes**
 - **AWS Lambda**
 - **Docker**
 - **AWS Fargate**
 - **Amazon EC2**
 - **Amazon S3**
 
-## Contribuições
-
-Sinta-se à vontade para corrigir qualquer erro encontrado neste repositório enviando-me um email em saracavalcante@id.uff.br!
+Sinta-se à vontade para corrigir qualquer erro encontrado neste repositório enviando-me um email em ramparo@id.uff.br!
 
 ---
 

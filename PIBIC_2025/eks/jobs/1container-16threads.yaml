@@ -1,0 +1,63 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: masa-1c-16t
+spec:
+  template:
+    spec:
+      containers:
+      - name: masa-openmp
+        image: sua-imagem:latest
+        resources:
+          requests:
+            cpu: "16000m"
+            memory: "32Gi"
+          limits:
+            cpu: "16000m"
+            memory: "32Gi"
+        env:
+        - name: THREADS
+          value: "16"
+        - name: CONTAINER_ID
+          value: "0"
+        - name: TOTAL_CONTAINERS
+          value: "1"
+        - name: INPUT_SET
+          value: "ALTERAR_AQUI"
+        - name: BUCKET
+          valueFrom:
+            configMapKeyRef:
+              name: masa-config
+              key: bucket
+        - name: SUBPASTA_SEQUENCIAS
+          valueFrom:
+            configMapKeyRef:
+              name: masa-config
+              key: subpasta_sequencias
+        - name: SUBPASTA_RESULTADOS
+          valueFrom:
+            configMapKeyRef:
+              name: masa-config
+              key: subpasta_resultados
+        - name: AMBIENTE
+          valueFrom:
+            configMapKeyRef:
+              name: masa-config
+              key: ambiente
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: aws-credentials
+              key: aws-access-key-id
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: aws-credentials
+              key: aws-secret-access-key
+        - name: AWS_DEFAULT_REGION
+          valueFrom:
+            secretKeyRef:
+              name: aws-credentials
+              key: aws-default-region
+      restartPolicy: Never
+  backoffLimit: 1

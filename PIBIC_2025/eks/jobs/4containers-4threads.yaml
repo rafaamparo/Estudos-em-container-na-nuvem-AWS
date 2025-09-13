@@ -1,0 +1,66 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: masa-4c-4t
+spec:
+  parallelism: 4
+  completions: 4
+  completionMode: Indexed
+  template:
+    spec:
+      containers:
+      - name: masa-openmp
+        image: sua-imagem:latest
+        resources:
+          requests:
+            cpu: "4000m"
+            memory: "8Gi"
+          limits:
+            cpu: "4000m"
+            memory: "8Gi"
+        env:
+        - name: THREADS
+          value: "4"
+        - name: CONTAINER_ID
+          value: "$(JOB_COMPLETION_INDEX)"
+        - name: TOTAL_CONTAINERS
+          value: "4"
+        - name: INPUT_SET
+          value: "ALTERAR_AQUI"  # 200, 300 ou 400
+        - name: BUCKET
+          valueFrom:
+            configMapKeyRef:
+              name: masa-config
+              key: bucket
+        - name: SUBPASTA_SEQUENCIAS
+          valueFrom:
+            configMapKeyRef:
+              name: masa-config
+              key: subpasta_sequencias
+        - name: SUBPASTA_RESULTADOS
+          valueFrom:
+            configMapKeyRef:
+              name: masa-config
+              key: subpasta_resultados
+        - name: AMBIENTE
+          valueFrom:
+            configMapKeyRef:
+              name: masa-config
+              key: ambiente
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: aws-credentials
+              key: aws-access-key-id
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: aws-credentials
+              key: aws-secret-access-key
+        - name: AWS_DEFAULT_REGION
+          valueFrom:
+            secretKeyRef:
+              name: aws-credentials
+              key: aws-default-region
+      restartPolicy: Never
+  backoffLimit: 1

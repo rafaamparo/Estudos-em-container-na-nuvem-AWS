@@ -1,0 +1,31 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: teste2-masa-cluster
+  region: us-east-1
+  version: "1.33"
+
+vpc:
+  id: vpc-0adecc9c2f0f2038f
+  subnets:
+    public:
+      us-east-1a:
+        id: subnet-0b740150e85662a5f
+      us-east-1c:
+        id: subnet-08e5b061f7ae6cf96
+      us-east-1b:
+        id: subnet-0452e487391512e2b
+
+nodeGroups:
+  - name: masa-workers
+    instanceType: c7g.8xlarge  # 32 vCPUs, 64GB RAM
+    desiredCapacity: 1
+    minSize: 1
+    maxSize: 1
+    ssh:
+      allow: true
+      publicKeyName: rafael_amparo
+    iam:
+      instanceRoleARN: "arn:aws:iam::891395689667:role/AmazonEKSNodeRole"
+  
